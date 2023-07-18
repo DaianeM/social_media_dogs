@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { ReactComponent as Dogs } from "../../assets/dogs.svg";
 
 import Login from "../../pages/Login/Login";
 
@@ -6,12 +7,16 @@ import "./Header.css";
 
 const Header = () => {
   return (
-    <div>
-      <nav className="container">
-        <Link to="/">Home</Link>
-        <Link to="/login">Login / Criar</Link>
+    <header className="header">
+      <nav className="nav container">
+        <Link className="logo" to="/" aria-label="Dogs - Home">
+          <Dogs />
+        </Link>
+        <Link className="login" to="/login">
+          Login / Criar
+        </Link>
       </nav>
-    </div>
+    </header>
   );
 };
 
